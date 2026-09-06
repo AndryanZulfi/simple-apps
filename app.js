@@ -4,6 +4,8 @@ const app = express()
 const path = require('path')
 require('dotenv').config();
 
+app.use(helmet.hidePoweredBy());
+
 // Import Middleware
 const logger = require('./middleware/logger')
 app.use(logger)
